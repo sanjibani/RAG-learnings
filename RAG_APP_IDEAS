@@ -1,0 +1,14 @@
+#idea1
+build a project from scratch these are the requirements
+1. i want to build a knowledge graph of companies,  for now i'll put all annual reports and other public fillings in the folder like a google notebook page , and the app will build a rag from the vactor emeddings , build a better retrieval and embedddings, 
+2. use the best technology stack available right not to solve this problem 
+3. the fillings and retrieval are most on the fundamentsla of the company
+like 
+3.how has the business done over the years , check the balance sheet for that
+check buyback, split spin off and other such corporate events 
+share dilution over the years compare the outstanding shares or equity capital of the company over the years
+like all parameters a  pro value investor like warren buffett will use to check  assess the company
+4. the job of the RAG is to build the emedding and retrieval to accurately answer  such questions from the annual reports
+5. design develop and implement with free models available on the internet for now to test and check later we'll use paid model api scubscription
+ask me if you've any qiestions but build it e2e
+remember you're a pro ai engineer
