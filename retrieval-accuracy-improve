@@ -1,0 +1,36 @@
+Here are several strategies to improve retrieval :
+1. Improve Chunking Strategy
+Smaller Chunks: Try reducing the chunk size (e.g., 500 tokens instead of 1000) to make each chunk more focused.
+Overlap: Increase chunk overlap (e.g., 250–300 tokens) so important context isn’t lost at chunk boundaries.
+Semantic Splitting: Use sentence or paragraph-based splitting instead of fixed-size chunks for more natural context.
+
+2. Use Better Embeddings
+Model Choice: Use more powerful embedding models (e.g., text-embedding-3-large from OpenAI, or Cohere/Google embeddings if available).
+Fine-tuning: If you have domain-specific data, consider fine-tuning embeddings (if supported by your provider).
+                                                                                
+3. Advanced Retrieval Techniques
+Hybrid Search: Combine vector search with keyword (BM25) search for better recall and precision.
+Re-ranking: Use a second-stage re-ranker (e.g., an LLM or cross-encoder) to re-rank the top-k results from the vector search.
+Metadata Filtering: Store and filter by metadata (e.g., section titles, page numbers) to narrow down results.
+
+4. Query Improvements
+Query Expansion: Automatically expand or paraphrase user queries to improve matching.
+Prompt Engineering: If using an LLM for re-ranking, craft prompts that encourage more accurate selection.
+
+5. Vector Store Settings
+Distance Metric: Experiment with different similarity metrics (cosine, Euclidean, dot product) in ChromaDB.
+Top-k: Adjust the number of results returned (e.g., try top 5 or 10 instead of 3).
+
+6. Post-processing
+Contextual Merging: Merge adjacent chunks if they are both highly relevant.
+Highlighting: Highlight or score the most relevant sentences within a chunk.
+Example: Hybrid Search and Re-ranking
+Retrieve top 10 chunks using vector similarity.
+Use an LLM to re-rank those chunks based on the query.
+Return the top 3 after re-ranking.
+
+Example: Semantic Chunking
+Instead of splitting by character count, split by sentences or paragraphs using a library like nltk or spaCy.
+
+Example: Metadata Filtering
+Store the section or chapter as metadata, and allow users to filter or boost results from specific sections.
